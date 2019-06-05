@@ -1,7 +1,7 @@
 package com.kedian.design.pattern.creational.abstractfactory;
 
 /**
- * Created by geely
+ * Created by wzh
  */
 public class Test {
     public static void main(String[] args) {
