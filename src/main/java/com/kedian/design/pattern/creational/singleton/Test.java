@@ -15,13 +15,14 @@ public class Test {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 //        LazySingleton lazySingleton=LazySingleton.getInstance();
-        /*Thread t1=new Thread(new T());
+        Thread t1=new Thread(new T());
         Thread t2=new Thread(new T());
         t1.start();
         t2.start();
         //主意t1,t2开启后，现在三个线程在执行，外加一个主线程
-        System.out.println("program end");*/
-
+        System.out.println("main thread"+ThreadLocalInstance.getInstance());
+        System.out.println("main thread"+ThreadLocalInstance.getInstance());
+        System.out.println("program end");
         //序列化破坏
         /*HungrySingleton instance=HungrySingleton.getInstance();
         ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("singleton_file"));
@@ -33,13 +34,13 @@ public class Test {
         /*
          *反射破坏单例
          */
-        Class objectClass=HungrySingleton.class;
+        /*Class objectClass=HungrySingleton.class;
         Constructor constructor=objectClass.getDeclaredConstructor();
         constructor.setAccessible(true);
         HungrySingleton instance=HungrySingleton.getInstance();
         HungrySingleton newInstance= (HungrySingleton) constructor.newInstance();
         System.out.println(instance);
         System.out.println(newInstance);
-        System.out.println(instance==newInstance);
+        System.out.println(instance==newInstance);*/
     }
 }
