@@ -1,0 +1,47 @@
+package com.kedian.design.pattern.behavioral.chainofresponsibility;
+
+/**
+ * @author wuzh
+ * @version V1.0
+ * @Package com.kedian.design.pattern.behavioral.chainofresponsibility
+ * @Description: 责任链模式：业务->课程发布需要手记校验和视频校验
+ * @date 2019/6/25
+ */
+public class Course {
+    private String name;
+    private String article;
+    private String video;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getArticle() {
+        return article;
+    }
+
+    public void setArticle(String article) {
+        this.article = article;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "name='" + name + '\'' +
+                ", article='" + article + '\'' +
+                ", video='" + video + '\'' +
+                '}';
+    }
+}
